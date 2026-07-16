@@ -1,16 +1,129 @@
-# React + Vite
+# AI Resume Analyzer - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern React application that analyzes a candidate's resume against a job description using AI. The application allows users to upload a resume, enter a job description, and receive an ATS-style analysis including skill matching, verdict, and improvement suggestions.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Upload resume in PDF format
+- Enter Job Description
+- AI-powered resume analysis
+- ATS Match Score
+- Qualified / Almost There / Not Yet verdict
+- Matched Skills
+- Missing Skills
+- Improvement Suggestions
+- Clean and responsive Material UI interface
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- Material UI (MUI)
+- Axios
+- React Hooks
+- CSS
+- Vite
 
-## Expanding the Oxlint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```
+src/
+│
+├── components/
+│   ├── Header.jsx
+│   ├── Hero.jsx
+│   ├── ResumeForm.jsx
+│   ├── UploadCard.jsx
+│   ├── JobDescriptionCard.jsx
+│   ├── AnalyzeButton.jsx
+│   └── AnalysisResult.jsx
+│
+├── context/
+│   └── ResumeContext.jsx
+│
+├── App.jsx
+└── main.jsx
+```
+
+## Application Workflow
+
+1. Upload a PDF resume.
+2. Enter the Job Description.
+3. Click **Analyze Resume**.
+4. The frontend sends the resume and job description to the ASP.NET Core backend.
+5. The backend extracts resume text, invokes the AI model, and returns the analysis.
+6. The frontend displays:
+   - ATS Match Score
+   - Verdict
+   - Matched Skills
+   - Missing Skills
+   - Reasons
+
+## Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/<your-username>/resume-analyzer-ui.git
+```
+
+Navigate to the project
+
+```bash
+cd resume-analyzer-ui
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```
+http://localhost:5173
+```
+
+## Backend
+
+This frontend communicates with the ASP.NET Core Web API available at:
+
+```
+http://localhost:5037
+```
+
+Make sure the backend server is running before starting the frontend.
+
+## Screenshots
+
+### Home Page
+
+> Add a screenshot here
+
+### Analysis Result
+
+> Add a screenshot here
+
+## Future Enhancements
+
+- Drag and Drop Resume Upload
+- Export Analysis Report as PDF
+- Resume History
+- Authentication
+- Dark Mode
+- Keyword Highlighting
+- AI-powered Resume Improvement Suggestions
+
+## Author
+
+**Saba Mahveen**
+
+GitHub: https://github.com/<your-username>
+
+LinkedIn: https://linkedin.com/in/<your-linkedin>
