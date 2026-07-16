@@ -63,7 +63,7 @@ src/
 Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/resume-analyzer-ui.git
+git clone https://github.com/SabaMahveen/resume-analyzer-ui.git
 ```
 
 Navigate to the project
@@ -104,11 +104,11 @@ Make sure the backend server is running before starting the frontend.
 
 ### Home Page
 
-> Add a screenshot here
+> ![alt text](image.png)
 
 ### Analysis Result
 
-> Add a screenshot here
+> ![alt text](image-1.png)
 
 ## Future Enhancements
 
